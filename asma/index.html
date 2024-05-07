@@ -36,6 +36,7 @@
     .message {
         font-size: 1.2em;
         color: #333;
+        text-align: center;
     }
     .image-container {
         display: flex;
@@ -43,9 +44,11 @@
         margin-bottom: 20px;
     }
     .image-container img {
-        width: 30%;
-        border-radius: 10px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transform: rotate(15deg);
     }
     .footer {
         background-color: #ff6b6b;
@@ -74,17 +77,18 @@
         <h1>Birthday Wishes</h1>
     </div>
     <div class="content">
-        <p class="message">Dear [Recipient's Name],</p>
-        <p class="message">[Your Message]</p>
+        <p class="message">Dear Love,</p>
+        <p class="message">You make every moment special. Happy Birthday!</p>
         <div class="image-container">
             <img src="image1.jpg" alt="Image 1">
-            <img src="image2.jpg" alt="Image 2">
-            <img src="image3.jpg" alt="Image 3">
+            <img src="image2.jpg" alt="Image 2" style="transform: rotate(-10deg);">
+            <img src="image3.jpg" alt="Image 3" style="transform: rotate(20deg);">
+            <img src="image4.jpg" alt="Image 4" style="transform: rotate(-5deg);">
         </div>
     </div>
     <div class="footer">
         <button onclick="window.print()">Print Card</button>
-        <p class="message">Best wishes on your birthday!</p>
+        <p class="message">Sending you all my love on this special day!</p>
     </div>
 </div>
 </body>
