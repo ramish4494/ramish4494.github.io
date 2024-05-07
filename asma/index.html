@@ -15,64 +15,76 @@
         max-width: 800px;
         margin: 20px auto;
         background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        color: #333;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
     }
-    h1, p, input, button {
+    .header {
+        background-color: #ff6b6b;
+        color: #fff;
+        padding: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        text-align: center;
+    }
+    h1, p {
         margin-bottom: 15px;
     }
-    input[type="text"] {
-        width: calc(100% - 24px);
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
+    .content {
+        padding: 20px;
+    }
+    .message {
+        font-size: 1.2em;
+        color: #333;
+    }
+    .image-container {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+    .image-container img {
+        width: 30%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .footer {
+        background-color: #ff6b6b;
+        padding: 20px;
+        text-align: center;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
     button {
         padding: 10px 20px;
         border: none;
-        border-radius: 4px;
-        background-color: #ff6b6b;
-        color: #fff;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #ff6b6b;
         cursor: pointer;
         transition: background-color 0.3s ease;
     }
     button:hover {
-        background-color: #ff4f4f;
-    }
-    .image-container {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 15px;
-    }
-    .image-container img {
-        width: 30%;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    .wish {
-        margin-top: 20px;
-        border-top: 2px solid #ccc;
-        padding-top: 20px;
-        font-size: 1.2em;
-        color: #555;
+        background-color: #ffcccc;
     }
 </style>
 </head>
 <body>
 <div class="container">
-    <h1 style="color: #ff6b6b;">Birthday Wishes</h1>
-    <p style="color: #333;">Dear [Recipient's Name],</p>
-    <p style="color: #333;">[Your Message]</p>
-    <div class="image-container">
-        <img src="image1.jpg" alt="Image 1">
-        <img src="image2.jpg" alt="Image 2">
-        <img src="image3.jpg" alt="Image 3">
+    <div class="header">
+        <h1>Birthday Wishes</h1>
     </div>
-    <div class="wish">
-        <p style="color: #333;">Best wishes on your birthday Asma!</p>
+    <div class="content">
+        <p class="message">Dear [Recipient's Name],</p>
+        <p class="message">[Your Message]</p>
+        <div class="image-container">
+            <img src="image1.jpg" alt="Image 1">
+            <img src="image2.jpg" alt="Image 2">
+            <img src="image3.jpg" alt="Image 3">
+        </div>
+    </div>
+    <div class="footer">
+        <button onclick="window.print()">Print Card</button>
+        <p class="message">Best wishes on your birthday!</p>
     </div>
 </div>
 </body>
