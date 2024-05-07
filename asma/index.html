@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Wishes</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    h1, p, input, button {
+        margin-bottom: 15px;
+    }
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    .image-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+    .image-container img {
+        width: 30%;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Birthday Wishes</h1>
+    <p>Send your warm wishes to your loved one!</p>
+    <input type="text" id="nameInput" placeholder="Enter recipient's name">
+    <input type="text" id="messageInput" placeholder="Write your message">
+    <div class="image-container">
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <img src="image3.jpg" alt="Image 3">
+    </div>
+    <button onclick="sendWishes()">Send Wishes</button>
+    <div id="output"></div>
+</div>
+<script>
+    function sendWishes() {
+        var name = document.getElementById("nameInput").value.trim();
+        var message = document.getElementById("messageInput").value.trim();
 
+        if (name === "" || message === "") {
+            alert("Please enter recipient's name and your message.");
+            return;
+        }
+
+        var output = document.getElementById("output");
+        output.innerHTML = "<p>Dear " + name + ",</p><p>" + message + "</p><p>Best wishes on your birthday!</p>";
+    }
+</script>
+</body>
+</html>
